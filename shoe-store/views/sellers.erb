@@ -1,0 +1,16 @@
+<h1>All Categories:</h1>
+
+  <% if @seller.any?() %>
+    <h3>Here are your categories:</h3>
+
+    <ul>
+      <% @seller.each() do |seller| %>
+        <li><a href="/categories/<%= category.id()%>"><%= seller.name() %></a> </li>
+      <% end %>
+    </ul>
+
+  <% else %>
+
+      <p>There are no categories yet!</p>
+
+  <% end %>
